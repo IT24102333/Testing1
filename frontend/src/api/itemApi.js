@@ -1,7 +1,8 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: import.meta.env.VITE_API_URL || "https://testing1-c7j3.onrender.com/",
+  // Add "/api" to the end of your Render URL
+  baseURL: import.meta.env.VITE_API_URL || "https://testing1-c7j3.onrender.com/api",
 });
 
 export const getItems = () => API.get("/items");
